@@ -41,9 +41,9 @@ public class ProxyAuth implements DesktopStateListener, EventListener {
         this.proxyPassword = java.lang.System.getProperty("com.openfin.demo.proxy.password");
         String proxy = java.lang.System.getProperty("com.openfin.demo.proxy.location");
         if (proxy != null) {
-            this.runtimeConfiguration.setAdditionalRuntimeArguments(String.format("--v=1 --proxy-server=%s", proxy));  // --v=1 enables verbose logging
+            this.runtimeConfiguration.setAdditionalRuntimeArguments(String.format("--v=1 --no-sandbox --proxy-server=%s", proxy));  // --v=1 enables verbose logging
         } else {
-            this.runtimeConfiguration.setAdditionalRuntimeArguments(String.format("--v=1"));  // --v=1 enables verbose logging
+            this.runtimeConfiguration.setAdditionalRuntimeArguments(String.format("--v=1 --no-sandbox"));  // --v=1 enables verbose logging
         }
     }
 

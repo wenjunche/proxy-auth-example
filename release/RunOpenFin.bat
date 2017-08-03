@@ -20,6 +20,6 @@ echo %startupURL%
 SET openfinLocation=%LocalAppData%\OpenFin
 
 cd %openfinLocation%
-start OpenFinRVM.exe --config=%startupURL%
+start OpenFinRVM.exe --config=%startupURL% --disable-auto-updates
 
 ENDLOCAL

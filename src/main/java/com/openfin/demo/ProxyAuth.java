@@ -37,6 +37,7 @@ public class ProxyAuth implements DesktopStateListener, EventListener {
             throw new IllegalArgumentException("Missing com.openfin.demo.runtime.version");
         }
         this.runtimeConfiguration.setRuntimeVersion(version);
+        this.runtimeConfiguration.addConfigurationItem("hashLicenseInformation", "{C58F70D7-DD68-487C-AE34-7B41020466A2}");
         this.proxyUsername = java.lang.System.getProperty("com.openfin.demo.proxy.username");
         this.proxyPassword = java.lang.System.getProperty("com.openfin.demo.proxy.password");
         String proxy = java.lang.System.getProperty("com.openfin.demo.proxy.location");
